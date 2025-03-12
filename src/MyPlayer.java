@@ -18,6 +18,9 @@ public class MyPlayer {
         System.out.println("MyPlayer Move");
 
         gameBoard = pBoard;
+
+        toColumns();
+
         int column = 0;
         int row = 0;
 
@@ -32,6 +35,36 @@ public class MyPlayer {
 
         Point myMove = new Point(row, column);
         return myMove;
+    }
+
+    public void toColumns(){
+
+        int column0 = 0;
+        int column1 = 0;
+        int column2 = 0;
+
+        for (int r = 0; r < gameBoard.length; r++){
+
+            for (int c = 0; c < gameBoard[r].length; c++){
+
+                System.out.println("(" + c + "," + r + ")");
+
+                //the following finds the point where we stop (it doesn't actually do anything)
+                if (r == 2){
+                    if (c == 2){
+                        System.out.println("We are at the point (2,2)");
+                        System.out.println("We have a 3x3");
+
+                    }
+                }
+            }
+
+        }
+
+
+
+
+
     }
 
 }
