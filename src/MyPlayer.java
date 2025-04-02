@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.Arrays;
 
 public class MyPlayer {
     public Chip[][] gameBoard;
@@ -42,6 +43,13 @@ public class MyPlayer {
         int column0 = 0;
         int column1 = 0;
         int column2 = 0;
+        int column3 = 0;
+        int column4 = 0;
+        int column5 = 0;
+        int column6 = 0;
+        int column7 = 0;
+        int column8 = 0;
+        int column9 = 0;
 
         for (int r = 0; r < gameBoard.length; r++){
 
@@ -49,22 +57,77 @@ public class MyPlayer {
 
                 System.out.println("(" + c + "," + r + ")");
 
-                //the following finds the point where we stop (it doesn't actually do anything)
-                if (r == 2){
-                    if (c == 2){
-                        System.out.println("We are at the point (2,2)");
-                        System.out.println("We have a 3x3");
-
-                    }
-                }
+                //loop through column for until (x, 2)
+                //add 1 for each cell as you loop through the column
             }
+
+            if (gameBoard[r][0].isAlive){
+                column0 = column0 + 1;
+                columns[0] = column0;
+            }
+
+            if (gameBoard[r][1].isAlive){
+                column1 = column1 + 1;
+                columns[1] = column1;
+            }
+
+            if (gameBoard[r][2].isAlive){
+                column2 = column2 + 1;
+                columns[2] = column2;
+            }
+
+            if (gameBoard[r][3].isAlive){
+                column3 = column3 + 1;
+                columns[3] = column3;
+            }
+
+            if (gameBoard[r][4].isAlive){
+                column4 = column4 + 1;
+                columns[4] = column4;
+            }
+
+            if (gameBoard[r][5].isAlive){
+                column5 = column5 + 1;
+                columns[5] = column5;
+            }
+
+            if (gameBoard[r][6].isAlive){
+                column6 = column6 + 1;
+                columns[6] = column6;
+            }
+
+            if (gameBoard[r][7].isAlive){
+                column7 = column7 + 1;
+                columns[7] = column7;
+            }
+
+            if (gameBoard[r][8].isAlive){
+                column8 = column8 + 1;
+                columns[8] = column8;
+            }
+
+            if (gameBoard[r][9].isAlive){
+                column9 = column9 + 1;
+                columns[9] = column9;
+            }
+
+
 
         }
 
+        System.out.println(column0);
+        System.out.println(column1);
+        System.out.println(column2);
+        System.out.println(column3);
+        System.out.println(column4);
+        System.out.println(column5);
+        System.out.println(column6);
+        System.out.println(column7);
+        System.out.println(column8);
+        System.out.println(column9);
 
 
-
-
+        System.out.println(Arrays.toString(columns));
     }
 
 }
