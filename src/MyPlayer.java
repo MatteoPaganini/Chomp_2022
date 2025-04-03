@@ -56,9 +56,20 @@ public class MyPlayer {
             for (int c = 0; c < gameBoard[r].length; c++){
 
                 System.out.println("(" + c + "," + r + ")");
-
                 //loop through column for until (x, 2)
                 //add 1 for each cell as you loop through the column
+
+               //Rule 1
+                if (gameBoard[0][0].isAlive == false){
+                    System.out.println("Game is over");
+                }
+
+                //Rule 2
+                if (gameBoard[r][c].isAlive == false){
+                    //any chip with a value larger than r or c is dead
+                    gameBoard[r+1][c+1].isAlive == false;
+                }
+
             }
 
             if (gameBoard[r][0].isAlive){
@@ -128,6 +139,12 @@ public class MyPlayer {
 
 
         System.out.println(Arrays.toString(columns));
+    }
+
+    public void Rules(){
+        //may have to insert rules inside the second for loop
+        //if a cell is alive and is clicked, all cells up and to the right are dead
+        //if a cell (0,0) is clicked then game is over
     }
 
 }
