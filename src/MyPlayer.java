@@ -12,6 +12,18 @@ public class MyPlayer {
          * This code will run just once, when the game opens.
          * Add your code here.
          */
+
+        System.out.println(gameBoard);
+
+        for (int a = 0; a <= 3; a++){
+            for(int b = 0; b <= 3; b++ ){
+                for (int c = 0; c <= 3; c++){
+                    System.out.println(a + " " + b + " " + c);
+
+                    //souround it with an if statement
+                }
+            }
+        }
     }
 
     public Point move(Chip[][] pBoard) {
@@ -58,17 +70,6 @@ public class MyPlayer {
                 System.out.println("(" + c + "," + r + ")");
                 //loop through column for until (x, 2)
                 //add 1 for each cell as you loop through the column
-
-               //Rule 1
-                if (gameBoard[0][0].isAlive == false){
-                    System.out.println("Game is over");
-                }
-
-                //Rule 2
-                if (gameBoard[r][c].isAlive == false){
-                    //any chip with a value larger than r or c is dead
-                    gameBoard[r+1][c+1].isAlive == false;
-                }
 
             }
 
