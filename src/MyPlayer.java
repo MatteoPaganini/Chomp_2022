@@ -15,18 +15,22 @@ public class MyPlayer {
 
         System.out.println(gameBoard);
 
-        for (int a = 0; a <= 3; a++){
+        for (int a = 1; a <= 3; a++){
             for(int b = 0; b <= 3; b++ ){
                 for (int c = 0; c <= 3; c++){
-                    System.out.println(a + " " + b + " " + c);
 
                     //surround it with an if statement
                     if (a >= b && b >= c){
-                        System.out.println();
+                        System.out.println("****");
+                        System.out.println(a + " " + b + " " + c);
+                        ResultingBoards(a, b, c);
                     }
                 }
             }
         }
+
+
+       // ResultingBoards();
     }
 
     public Point move(Chip[][] pBoard) {
@@ -145,10 +149,22 @@ public class MyPlayer {
         System.out.println(Arrays.toString(columns));
     }
 
-    public void Rules(){
-        //may have to insert rules inside the second for loop
-        //if a cell is alive and is clicked, all cells up and to the right are dead
-        //if a cell (0,0) is clicked then game is over
+    public void ResultingBoards(int a, int b, int c){
+
+        if (a > 0 && b > 0 && c > 0){
+            System.out.println("Resulting Boards:");
+            int A = a-1;
+            int B = b-1;
+            int C = c;
+
+
+            // we want to loop through C until C=0
+            //make a for loop for C, and put the sout in body of for loop
+            C = C-1;
+            System.out.println(a + " " + b + " " + C);
+        }
+
+
     }
 
 }
