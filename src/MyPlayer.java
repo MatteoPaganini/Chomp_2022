@@ -20,7 +20,10 @@ public class MyPlayer {
                 for (int c = 0; c <= 3; c++){
                     System.out.println(a + " " + b + " " + c);
 
-                    //souround it with an if statement
+                    //surround it with an if statement
+                    if (a >= b && b >= c){
+                        System.out.println();
+                    }
                 }
             }
         }
