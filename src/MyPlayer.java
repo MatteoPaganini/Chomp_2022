@@ -21,9 +21,10 @@ public class MyPlayer {
 
                     //surround it with an if statement
                     if (a >= b && b >= c){
-                        System.out.println("****");
                         System.out.println(a + " " + b + " " + c);
                         ResultingBoards(a, b, c);
+                        System.out.println(" ");
+                        System.out.println("Next Board:");
                     }
                 }
             }
@@ -151,17 +152,55 @@ public class MyPlayer {
 
     public void ResultingBoards(int a, int b, int c){
 
-        if (a > 0 && b > 0 && c > 0){
+        if (a > 0 && b >= 0 && c >= 0){
             System.out.println("Resulting Boards:");
-            int A = a-1;
-            int B = b-1;
-            int C = c;
+            int a1 = a;
+            int b1 = b;
+            int c1 = c;
+            int c2;
 
 
             // we want to loop through C until C=0
             //make a for loop for C, and put the sout in body of for loop
-            C = C-1;
-            System.out.println(a + " " + b + " " + C);
+
+            for (int x = c; x > 0; x--){
+                c1 = c1-1;
+                System.out.println(a + " " + b + " " + c1);
+            }
+            c1= c;
+
+            for (int y = b; y > 0; y--){
+                b1 = b1-1;
+                if(b1 < c1){
+                    c1=b1;
+                }
+                System.out.println(a + " " + b1 + " " + c1);
+            }
+
+            b1=b;
+            c1 = c;
+            for (int z = a; z > 1; z--){
+                a1 = a1-1;
+
+                if (a1 < b1){
+                    b1=a1;
+                } //comparing a1 to b1
+                if (a1 < c1){
+                    c1=a1;
+                } //comparing a1 to c1
+
+                System.out.println(a1 + " " + b1 + " " + c1);
+            }
+
+//            if (a > 0 && b > 0 && c1 > 0){
+//                b1 = b-1;
+//                c2 = c1 -1;
+//                System.out.println(a + " " + b1 + c2);
+//
+//                if (a > 0 && b1 > 0 && c1 > 0){
+//
+//                }
+//            }
         }
 
 
